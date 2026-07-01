@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<VisualLandingSystem>
+<VLSDec>
+<FinalApproach_PilotAssistance_OperationContext>
+</FinalApproach_PilotAssistance_OperationContext>
+<AircraftState>
+</AircraftState>
+<RunwayEnvironment>
+</RunwayEnvironment>
+<VisualConditions>
+</VisualConditions>
+<VLSFunction>
+</VLSFunction>
+<SystemOutput>
+</SystemOutput>
+</VLSDec>
+</VisualLandingSystem>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<VisualLandingSystem>
+<VLSDec>
+<OperationContext>
+<UseCaseSpec>
+<PilotAssistance/>
+<FullAutonomy/>
+</UseCaseSpec>
+<FlightPhaseSpec>
+<Cruise/>
+<Descent/>
+<FinalApproach/>
+</FlightPhaseSpec>
+</OperationContext>
+<AircraftState/>
+<RunwayEnvironment/>
+<VisualConditions/>
+<VLSFunction/>
+<SystemOutput/>
+</VLSDec>
+</VisualLandingSystem>

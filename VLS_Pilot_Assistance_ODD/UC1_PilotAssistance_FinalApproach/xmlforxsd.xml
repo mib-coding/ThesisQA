@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ses.xsd" name="VisualLandingSystem">
+<aspect name="VLSDec">
+<entity name="FinalApproach_PilotAssistance_OperationContext">
+</entity>
+<entity name="AircraftState">
+<var name="DistanceToRunwayNM" type="double" default="1.0" lower="0.3" upper="2.0"> </var>
+<var name="AltitudeAGLft" type="double" default="800.0" lower="100" upper="2300"> </var>
+<var name="GlideSlopeAngleDeg" type="double" default="3.0" lower="2.5" upper="8.0"> </var>
+<var name="LateralDeviationDeg" type="double" default="1.0" lower="0" upper="5"> </var>
+<var name="AzimuthAngleDeg" type="double" default="5.0" lower="0" upper="30"> </var>
+<var name="PitchAngleDeg" type="double" default="5.0" lower="0" upper="20"> </var>
+<var name="RollAngleDeg" type="double" default="0.0" lower="0" upper="30"> </var>
+</entity>
+<entity name="RunwayEnvironment">
+<var name="ParallelRunwayPresent" type="boolean" default="false"> </var>
+<var name="RunwayDatabaseAvailable" type="boolean" default="true"> </var>
+<var name="RunwayIdentifierKnown" type="boolean" default="true"> </var>
+<var name="RunwayMarking" type="string" default="Marked"> </var>
+<var name="RunwaySelectedByPilot" type="boolean" default="true"> </var>
+<var name="RunwaySurface" type="string" default="HardSurface"> </var>
+</entity>
+<entity name="VisualConditions">
+<var name="SunElevationDeg" type="double" default="20.0" lower="5" upper="90"> </var>
+<var name="TimeOfDay" type="string" default="Daytime"> </var>
+<var name="VisibilityKM" type="double" default="10.0" lower="4" upper="50"> </var>
+<var name="WeatherCondition" type="string" default="VMC"> </var>
+</entity>
+<entity name="VLSFunction">
+<behaviour name="DetectRunway"> </behaviour>
+<behaviour name="TrackRunway"> </behaviour>
+<behaviour name="SelectRunway"> </behaviour>
+<behaviour name="EstimateRelativePose"> </behaviour>
+<behaviour name="ComputeGuidanceDeviation"> </behaviour>
+<behaviour name="ReportUncertainty"> </behaviour>
+<behaviour name="MonitorSystemHealth"> </behaviour>
+<behaviour name="DisplayGuidanceToPilot"> </behaviour>
+</entity>
+<entity name="SystemOutput">
+<var name="HorizontalDeviationAvailable" type="boolean" default="true"> </var>
+<var name="RelativePositionAvailable" type="boolean" default="true"> </var>
+<var name="RunwayDetected" type="boolean" default="true"> </var>
+<var name="SelectedRunwayIdentifier" type="string" default="RWY_XX"> </var>
+<var name="SystemHealthOK" type="boolean" default="true"> </var>
+<var name="UncertaintyAvailable" type="boolean" default="true"> </var>
+<var name="ValidityFlag" type="boolean" default="true"> </var>
+<var name="VerticalDeviationAvailable" type="boolean" default="true"> </var>
+</entity>
+</aspect>
+</entity>

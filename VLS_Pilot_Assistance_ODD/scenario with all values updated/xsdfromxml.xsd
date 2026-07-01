@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+ xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" 
+ elementFormDefault="qualified" vc:minVersion="1.1" >
+
+<xs:element name="VisualLandingSystem">
+<xs:complexType>
+<xs:sequence id="VLSDec">
+<xs:element name="Cruise_PilotAssistance_OperationContext">
+<xs:complexType>
+<xs:attribute name="name" use="optional"/> 
+</xs:complexType>
+</xs:element>
+<xs:element name="AircraftState">
+<xs:complexType>
+<xs:attribute name="AltitudeAGLft" type="double" default="500.0">
+<xs:simpleType>
+<xs:restriction base="xs:double">
+<xs:type  value="double"/>
+<xs:minInclusive  value="100"/>
+<xs:maxInclusive value="2300"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:attribute>
+<xs:attribute name="AzimuthAngleDeg" type="double" default="6.0">
+<xs:simpleType>
+<xs:restriction base="xs:double">
+<xs:type  value="double"/>
+<xs:minInclusive  value="0"/>
+<xs:maxInclusive value="30"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:attribute>
+<xs:attribute name="DistanceToRunwayNM" type="double" default="1.5">
+<xs:simpleType>
+<xs:restriction base="xs:double">
+<xs:type  value="double"/>
+<xs:minInclusive  value="0.3"/>
+<xs:maxInclusive value="2.0"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:attribute>
+<xs:attribute name="GlideSlopeAngleDeg" type="double" default="5.0">
+<xs:simpleType>
+<xs:restriction base="xs:double">
+<xs:type  value="double"/>
+<xs:minInclusive  value="2.5"/>
+<xs:maxInclusive value="8.0"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:attribute>
+<xs:attribute name="LateralDeviationDeg" type="double" default="2.0">
+<xs:simpleType>
+<xs:restriction base="xs:double">
+<xs:type  value="double"/>
+<xs:minInclusive  value="0"/>
+<xs:maxInclusive value="5"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:attribute>
+<xs:attribute name="PitchAngleDeg" type="double" default="7.0">
+<xs:simpleType>
+<xs:restriction base="xs:double">
+<xs:type  value="double"/>
+<xs:minInclusive  value="0"/>
+<xs:maxInclusive value="20"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:attribute>
+<xs:attribute name="RollAngleDeg" type="double" default="8.5">
+<xs:simpleType>
+<xs:restriction base="xs:double">
+<xs:type  value="double"/>
+<xs:minInclusive  value="0"/>
+<xs:maxInclusive value="30"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:attribute>
+<xs:attribute name="name" use="optional"/> 
+</xs:complexType>
+</xs:element>
+<xs:element name="RunwayEnvironment">
+<xs:complexType>
+<xs:attribute name="ParallelRunwayPresent" type="boolean" default="true">
+</xs:attribute>
+<xs:attribute name="RunwayDatabaseAvailable" type="boolean" default="true">
+</xs:attribute>
+<xs:attribute name="RunwayIdentifierKnown" type="boolean" default="true">
+</xs:attribute>
+<xs:attribute name="RunwayMarking" type="string" default="Marked">
+</xs:attribute>
+<xs:attribute name="RunwaySelectedByPilot" type="boolean" default="true">
+</xs:attribute>
+<xs:attribute name="RunwaySurface" type="string" default="HardSurface">
+</xs:attribute>
+<xs:attribute name="name" use="optional"/> 
+</xs:complexType>
+</xs:element>
+<xs:element name="VisualConditions">
+<xs:complexType>
+<xs:attribute name="SunElevationDeg" type="double" default="50.0">
+<xs:simpleType>
+<xs:restriction base="xs:double">
+<xs:type  value="double"/>
+<xs:minInclusive  value="5"/>
+<xs:maxInclusive value="90"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:attribute>
+<xs:attribute name="TimeOfDay" type="string" default="Daytime">
+</xs:attribute>
+<xs:attribute name="VisibilityKM" type="double" default="25.0">
+<xs:simpleType>
+<xs:restriction base="xs:double">
+<xs:type  value="double"/>
+<xs:minInclusive  value="4"/>
+<xs:maxInclusive value="50"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:attribute>
+<xs:attribute name="WeatherCondition" type="string" default="VMC">
+</xs:attribute>
+<xs:attribute name="name" use="optional"/> 
+</xs:complexType>
+</xs:element>
+<xs:element name="VLSFunction">
+<xs:complexType>
+<xs:attribute name="DetectRunway">
+</xs:attribute>
+<xs:attribute name="TrackRunway">
+</xs:attribute>
+<xs:attribute name="SelectRunway">
+</xs:attribute>
+<xs:attribute name="EstimateRelativePose">
+</xs:attribute>
+<xs:attribute name="ComputeGuidanceDeviation">
+</xs:attribute>
+<xs:attribute name="ReportUncertainty">
+</xs:attribute>
+<xs:attribute name="MonitorSystemHealth">
+</xs:attribute>
+<xs:attribute name="DisplayGuidanceToPilot">
+</xs:attribute>
+<xs:attribute name="name" use="optional"/> 
+</xs:complexType>
+</xs:element>
+<xs:element name="SystemOutput">
+<xs:complexType>
+<xs:attribute name="HorizontalDeviationAvailable" type="boolean" default="false">
+</xs:attribute>
+<xs:attribute name="RelativePositionAvailable" type="boolean" default="true">
+</xs:attribute>
+<xs:attribute name="RunwayDetected" type="boolean" default="true">
+</xs:attribute>
+<xs:attribute name="SelectedRunwayIdentifier" type="string" default="RWY_XX">
+</xs:attribute>
+<xs:attribute name="SystemHealthOK" type="boolean" default="true">
+</xs:attribute>
+<xs:attribute name="UncertaintyAvailable" type="boolean" default="false">
+</xs:attribute>
+<xs:attribute name="ValidityFlag" type="boolean" default="true">
+</xs:attribute>
+<xs:attribute name="VerticalDeviationAvailable" type="boolean" default="true">
+</xs:attribute>
+<xs:attribute name="name" use="optional"/> 
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+<xs:attribute name="name" use="optional"/> 
+</xs:complexType>
+</xs:element>
+</xs:schema>
